@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bố cục 4 cột</title>
+    <style>
+      .container {
+        width: 960px;
+        margin: 0 auto;
+        padding: 10px;
+      }
+
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .col {
+        background-color: #90caf9;
+        padding: 20px;
+        box-sizing: border-box;
+        flex: 1 0 100%; /* mặc định chiếm toàn bộ chiều rộng */
+        margin: 5px 0;
+        text-align: center;
+      }
+
+      /* Từ màn hình >= 576px, hiển thị 4 cột ngang */
+      @media (min-width: 576px) {
+        .col {
+          flex: 1 0 25%; /* 4 cột bằng nhau (25%) */
+          margin: 5px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col">Cột 1</div>
+        <div class="col">Cột 2</div>
+        <div class="col">Cột 3</div>
+        <div class="col">Cột 4</div>
+      </div>
+    </div>
+  </body>
+</html>
